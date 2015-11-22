@@ -18,7 +18,7 @@ class CarsControllerTest < ActionController::TestCase
 
   test "should create car" do
     assert_difference('Car.count') do
-      post :create, car: { color: @car.color, make: @car.make, year: @car.year }
+      post :create, car: { color: @car.color, company: @car.company, year: @car.year }
     end
 
     assert_redirected_to car_path(assigns(:car))
@@ -35,7 +35,7 @@ class CarsControllerTest < ActionController::TestCase
   end
 
   test "should update car" do
-    patch :update, id: @car, car: { color: @car.color, make: @car.make, year: @car.year }
+    patch :update, id: @car, car: { color: @car.color, company: @car.company, year: @car.year }
     assert_redirected_to car_path(assigns(:car))
   end
 
